@@ -1,11 +1,8 @@
-import { Box, Button, useTheme, TextField, Alert } from "@mui/material";
-import { tokens } from "../styles/theme";
+import { Box, Button, TextField, Alert } from "@mui/material";
 import { useState } from "react";
 import axios from 'axios';
 
 const CreateMenu = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({

@@ -3,16 +3,14 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchIcon from "@mui/icons-material/Search";
-import InputBase from "@mui/material/InputBase";
-import { ColorModeContext, tokens } from "../../styles/theme";
+import { ColorModeContext } from "../../styles/theme";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
+import { Folder } from "@mui/icons-material";
 
 const Topbar = () => {
 
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
   return (
@@ -22,12 +20,12 @@ const Topbar = () => {
       <Box
         display="flex"
         borderRadius="3px"
-        backgroundColor={colors.primary[400]}
+        backgroundColor={"#D0D5DD"}
       >
-        <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
+    
 
         <IconButton type="button" sx={{ p: 1 }}>
-          <SearchIcon />
+          <Folder />/  Menu
         </IconButton>
       </Box>
 
