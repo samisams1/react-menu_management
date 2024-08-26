@@ -8,9 +8,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import SidebarMenuItem from "./SidebarMenuItem";
 import "react-pro-sidebar/dist/css/styles.css";
 
-
 const SidebarMenu = () => {
-
   const location = useLocation();
   const urlPathName = location.pathname;
 
@@ -40,9 +38,7 @@ const SidebarMenu = () => {
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
-
         <Menu iconShape="square">
-
           {/* LOGO AND MENU ICON */}
           {/* 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */}
           <MenuItem
@@ -53,34 +49,28 @@ const SidebarMenu = () => {
               color: colors.grey[100],
             }}
           >
-            {
-              !isCollapsed && (
-                <Box
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  ml="15px"
-                >
-                  <Typography variant="h3" color={colors.grey[100]}>
-                    ADMIN
-                  </Typography>
-                  <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <MenuOutlinedIcon />
-                  </IconButton>
-                </Box>
-              )
-            }
+            {!isCollapsed && (
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                ml="15px"
+              >
+                <img src="/logo.jpeg" alt="Logo" style={{ height: '40px', marginRight: '15px' }} />
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                  <MenuOutlinedIcon />
+                </IconButton>
+              </Box>
+            )}
           </MenuItem>
 
           {/* 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */}
-       
 
           {/* 🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧 */}
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            {
-              sidebarMenu.map(menu =>
-                menu.tag === 'divider'
-                  ?
+            {sidebarMenu.map((menu) =>
+              menu.tag === 'divider'
+                ? (
                   <Typography
                     variant="h6"
                     key={menu.title}
@@ -89,19 +79,18 @@ const SidebarMenu = () => {
                   >
                     {menu.title}
                   </Typography>
-                  :
+                )
+                : (
                   <SidebarMenuItem
                     key={menu.title}
                     menu={menu}
                     selected={selected}
                     setSelected={setSelected}
                   />
-              )
-            }
+                )
+            )}
           </Box>
-
         </Menu>
-
       </ProSidebar>
     </Box>
   );

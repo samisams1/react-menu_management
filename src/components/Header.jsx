@@ -1,5 +1,6 @@
 import { Typography, Box, useTheme, Icon } from "@mui/material";
 import { tokens } from "../styles/theme";
+import { Window } from "@mui/icons-material";
 
 const Header = ({ title, subtitle }) => {
   const theme = useTheme();
@@ -7,19 +8,27 @@ const Header = ({ title, subtitle }) => {
 
   return (
     <Box mb="30px" display="flex" alignItems="center">
-      <Icon
-        fontSize="large"
+      <Box
         sx={{
-          color: colors.blueAccent[500],
-          backgroundColor: colors.blueAccent[700],
+          width: "52px", // Adjust the size of the circle as needed
+          height: "52px",
           borderRadius: "50%",
-          padding: "10px",
-          marginRight: "10px",
+          backgroundColor: "#253BFF",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginRight: "30px",
         }}
       >
-        {/* Add your desired icon component here */}
-        add
-      </Icon>
+        <Icon
+          fontSize="large"
+          sx={{
+            color: "#FFFFFF",
+          }}
+        >
+          <Window />
+        </Icon>
+      </Box>
 
       <Box>
         <Typography

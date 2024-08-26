@@ -1,44 +1,40 @@
-import SettingsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import AppsOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import GroupOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import TrendingUpOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import { Folder, Window } from "@mui/icons-material";
 
 export const sidebarMenu = [
     {
         title: 'Systems',
-        icon: HomeOutlinedIcon,
+        icon: Folder,
         path: '/',
     },
     {
         title: 'System Code',
-        icon: AppsOutlinedIcon,
-        path: '/team',
+        icon: Window,
+        path: '/system-code',
     },
     {
         title: 'Properties',
-        icon: TrendingUpOutlinedIcon,
-        path: '/contacts',
+        icon: Window,
+        path: '/properties',
     },
     {
         title: 'Menus',
-        icon: TrendingUpOutlinedIcon,
-        path: '/invoices',
+        icon: Window,
+        path: '/menus',
     },
     {
         title: 'API List',
-        icon: GroupOutlinedIcon,
-        path: '/form',
+        icon: Window,
+        path: '/apis',
     },
     {
         title: 'User & Group',
-        icon: GroupOutlinedIcon,
-        path: '/form',
+        icon: Folder,
+        path: '/users',
     },
     {
         title: 'Competition',
-        icon: SettingsOutlinedIcon,
-        path: '/calendar',
+        icon: Folder,
+        path: '/competition',
     }
 ]
 

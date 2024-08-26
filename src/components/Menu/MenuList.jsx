@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Box, Button, Collapse, IconButton, Typography } from '@mui/material';
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { fetchMenuItems, toggleMenu, expandAll, collapseAll } from '../../store/actions'
-
 const MenuList = () => {
   const dispatch = useDispatch();
   const { menuItems, loading, error, expandedMenus, expandButtonColor, collapseButtonColor } = useSelector((state) => state.menu);

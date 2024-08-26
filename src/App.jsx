@@ -24,6 +24,13 @@ const App = () => {
               <Topbar />
               <Routes>
                 <Route path="/" element={<MenuPage />} />
+                <Route path="/menus" element={<MenuPage />} />
+                <Route path="/system-code" element={<MenuPage />} />
+                <Route path="/system" element={<MenuPage />} />
+                <Route path="/properties" element={<MenuPage />} />
+                <Route path="/apis" element={<MenuPage />} />
+                <Route path="/users" element={<MenuPage />} />
+                <Route path="/competition" element={<MenuPage />} />
               </Routes>
             </section>
           </main>

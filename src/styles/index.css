@@ -37,3 +37,22 @@ body,
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  .menu-item .icon-button {
+    margin-right: 8px;
+  }
+
+  .menu-item .link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .children {
+    margin-left: 16px;
+  }
