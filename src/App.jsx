@@ -1,8 +1,7 @@
 import { MenuPage, SidebarMenu, Topbar } from './pages';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CssBaseline, ThemeProvider } from '@mui/material'; // reset all default css
+import { CssBaseline, ThemeProvider } from '@mui/material'; 
 import { ColorModeContext, useMode } from './styles/theme';
-//import store from './store'; // import your Redux store
 import store from './store/store';
 import { Provider } from 'react-redux';
 

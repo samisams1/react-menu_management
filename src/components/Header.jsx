@@ -21,7 +21,7 @@ const Header = ({ title, subtitle }) => {
         }}
       >
         <Icon
-          fontSize="large"
+          fontSize="24px" // Adjust the size of the window icon as needed
           sx={{
             color: "#FFFFFF",
           }}
@@ -33,7 +33,7 @@ const Header = ({ title, subtitle }) => {
       <Box>
         <Typography
           variant="h2"
-          color={colors.grey[100]}
+          color={"#101828"}
           fontWeight="bold"
           sx={{ m: "0 0 5px 0" }}
         >

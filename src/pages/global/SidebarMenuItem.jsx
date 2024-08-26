@@ -3,7 +3,6 @@ import { MenuItem } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 
 const SidebarMenuItem = ({ menu, selected, setSelected }) => {
-
   return (
     <Box
       sx={{
@@ -22,7 +21,7 @@ const SidebarMenuItem = ({ menu, selected, setSelected }) => {
         onClick={() => setSelected(menu.path)}
         style={{
           color: selected === menu.path ? "#000000" : "#667085",
-          padding: "10px 20px",
+          padding: "1px", // Reduce the left padding to 10px
           fontSize: "14px",
           fontWeight: 700,
           fontFamily: "Plus Jakarta Sans",
