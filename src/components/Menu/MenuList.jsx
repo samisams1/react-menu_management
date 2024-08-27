@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Box, Button, Collapse, IconButton, Typography } from '@mui/material';
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
-import { fetchMenuItems, toggleMenu, expandAll, collapseAll } from '../../store/actions'
+import { ExpandLess, ExpandMore, } from '@mui/icons-material';
+import { fetchMenuItems, toggleMenu, expandAll, collapseAll } from '../../store/actions';
+import './MenuList.css'; // Import the CSS file
+
 const MenuList = () => {
   const dispatch = useDispatch();
   const { menuItems, loading, error, expandedMenus, expandButtonColor, collapseButtonColor } = useSelector((state) => state.menu);
@@ -23,13 +25,16 @@ const MenuList = () => {
     dispatch(collapseAll());
   };
 
-  const renderMenuItem = (item) => {
+  const renderMenuItem = (item, level = 0) => {
     return (
-      <Box key={item.id}>
+      <Box key={item.id} className={`menu-item-level-${level}`}>
         <Box display="flex" alignItems="center" onClick={() => handleToggleMenu(item)}>
           <IconButton>
             {expandedMenus[item.id] ? <ExpandLess /> : <ExpandMore />}
           </IconButton>
+          {item.children && item.children.length > 0 && (
+            <ExpandMore sx={{ marginRight: 1 }} />
+          )}
           <Typography variant="subtitle1">
             <a
               href={item.link}
@@ -42,8 +47,8 @@ const MenuList = () => {
           </Typography>
         </Box>
         <Collapse in={expandedMenus[item.id]} timeout="auto" unmountOnExit>
-          <Box pl={4}>
-            {item.children && item.children.map(renderMenuItem)}
+          <Box pl={4 * (level + 1)}>
+            {item.children && item.children.map((child) => renderMenuItem(child, level + 1))}
           </Box>
         </Collapse>
       </Box>
@@ -87,7 +92,7 @@ const MenuList = () => {
           Collapse All
         </Button>
       </Box>
-      {menuItems.map(renderMenuItem)}
+      {menuItems.map((item) => renderMenuItem(item))}
     </Box>
   );
 };

@@ -1,0 +1,91 @@
+.menu-item-level-0 {
+  margin-left: 0;
+  position: relative;
+}
+
+.menu-item-level-0::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 20px; /* Extend the line to the "Expand More" icon */
+  height: 1px;
+  background-color: #666;
+}
+
+.menu-item-level-1 {
+  margin-left: 20px;
+  position: relative;
+}
+
+.menu-item-level-1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 20px; /* Extend the line to the "Expand More" icon */
+  height: 1px;
+  background-color: #666;
+}
+
+.menu-item-level-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 1px;
+  background-color: #666;
+}
+
+.menu-item-level-2 {
+  margin-left: 40px;
+  position: relative;
+}
+
+.menu-item-level-2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 20px; /* Extend the line to the "Expand More" icon */
+  height: 1px;
+  background-color: #666;
+}
+
+.menu-item-level-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 1px;
+  background-color: #666;
+}
+
+.menu-item-level-3 {
+  margin-left: 60px;
+  position: relative;
+}
+
+.menu-item-level-3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 20px; /* Extend the line to the "Expand More" icon */
+  height: 1px;
+  background-color: #666;
+}
+
+.menu-item-level-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 1px;
+  background-color: #666;
+}
+
+/* Add more styles for deeper levels as needed */
